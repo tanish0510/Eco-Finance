@@ -1,0 +1,116 @@
+body {
+    font-family: 'Georgia', serif;
+    /* Rustic font for a warm feel */
+    background: linear-gradient(135deg, #006400, #8B4513);
+    /* Animated gradient background */
+    color: #ffffff;
+    /* White text for contrast */
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s;
+    /* Smooth background transition */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur effect for a modern touch */
+}
+
+h1 {
+    text-align: center;
+    color: #ffc107;
+    /* Gold color for headings */
+    font-size: 2.5em;
+    /* Larger font size for the title */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    /* Bold labels for emphasis */
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Transparent background for select */
+    color: #ffffff;
+    /* White text color for contrast */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+select:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Lighter on hover */
+}
+
+button {
+    background-color: #ffc107;
+    /* Gold button color */
+    color: #333;
+    /* Dark text for readability */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2em;
+    /* Larger font size for buttons */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transition */
+}
+
+button:hover {
+    background-color: #ffca28;
+    /* Lighter gold on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    /* Larger font size for results */
+    color: #4caf50;
+    /* Green color for positive results */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent card background */
+    padding: 15px;
+    border-radius: 8px;
+    /* Rounded corners for cards */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    /* Soft shadow */
+    margin: 15px 0;
+    /* Spacing between cards */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    /* Vertical layout for cards */
+    gap: 15px;
+    /* Spacing between flex items */
+}
