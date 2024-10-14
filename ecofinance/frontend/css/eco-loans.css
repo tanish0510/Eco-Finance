@@ -1,0 +1,375 @@
+body {
+    font-family: 'Georgia', serif;
+    /* Rustic font */
+    margin: 0;
+    padding: 0;
+    animation: gradientAnimation 10s ease infinite;
+    /* Animation for gradient */
+    background: linear-gradient(135deg, #006400, #8B4513, #005000, #7A4513);
+    /* Initial gradient */
+    background-size: 400% 400%;
+    /* Ensures the gradient is large enough for animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        /* Start position */
+    }
+    50% {
+        background-position: 100% 50%;
+        /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%;
+        /* End position */
+    }
+}
+
+.header {
+    background: rgba(30, 30, 30, 0.8);
+    /* Dark semi-transparent header */
+    color: #ffffff;
+    /* White text */
+    padding: 20px 0;
+    /* Padding for header */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo and links */
+    align-items: center;
+    /* Center align items */
+    padding: 0 20px;
+    /* Padding for navbar */
+}
+
+.logo {
+    font-size: 32px;
+    /* Logo size */
+}
+
+.nav-links {
+    list-style: none;
+    /* Remove default list style */
+    display: flex;
+    /* Flexbox for navigation */
+}
+
+.nav-links li {
+    margin: 0 15px;
+    /* Space between links */
+}
+
+.nav-links a {
+    color: #ffffff;
+    /* White link color */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s;
+    /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+    /* Change color on hover */
+}
+
+.main-content {
+    padding: 60px 20px;
+    /* Increased padding for main content */
+}
+
+.eco-loans-section {
+    background: rgba(255, 255, 255, 0.1);
+    /* Light background for section */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Shadow to make section visible */
+    padding: 40px;
+    /* Increased padding for section */
+    margin: 20px 0;
+    /* Space above and below section */
+}
+
+.eco-loans-section h2 {
+    font-size: 36px;
+    /* Section heading size */
+    margin-bottom: 20px;
+    /* Space below heading */
+    color: #ffc107;
+    /* Gold color for heading */
+}
+
+.eco-loans-section p {
+    font-size: 18px;
+    /* Paragraph size */
+    line-height: 1.6;
+    /* Increased line height for readability */
+    margin-bottom: 20px;
+    /* Space below paragraph */
+}
+
+.eco-loan-card {
+    background: rgba(255, 255, 255, 0.2);
+    /* Lighter transparent card background */
+    padding: 20px;
+    /* Padding for card */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Shadow */
+    margin: 10px;
+    /* Space between cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transform and shadow transition */
+}
+
+.eco-loan-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 1), 0 0 30px rgba(255, 204, 0, 0.8);
+    /* Glowing effect */
+}
+
+.eco-loan-card h3 {
+    font-size: 24px;
+    /* Card heading size */
+    margin-bottom: 10px;
+    /* Space below card heading */
+    color: #ffffff;
+    /* White color for card heading */
+}
+
+.eco-loan-card p {
+    font-size: 16px;
+    /* Card paragraph size */
+    margin-bottom: 15px;
+    /* Space below paragraph */
+    color: #ffffff;
+    /* White color for card text */
+}
+
+.btn {
+    background-color: #ffc107;
+    /* Button background */
+    color: #000000;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Increased padding for button */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth background and scale transition */
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    /* Change background on hover */
+    color: #23272a;
+    /* Change text color on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
+}
+
+.footer {
+    background: rgba(30, 30, 30, 0.8);
+    /* Dark background for footer */
+    color: #ffffff;
+    /* White text */
+    padding: 20px 0;
+    /* Padding for footer */
+    text-align: center;
+    /* Center align footer content */
+}
+
+.header {
+    background: rgba(30, 30, 30, 0.8);
+    /* Dark semi-transparent header */
+    color: #ffffff;
+    /* White text */
+    padding: 20px 0;
+    /* Padding for header */
+}
+
+.navbar {
+    display: flex;
+    /* Flexbox for navbar */
+    justify-content: space-between;
+    /* Space between logo and links */
+    align-items: center;
+    /* Center align items */
+    padding: 0 20px;
+    /* Padding for navbar */
+}
+
+.logo {
+    font-size: 32px;
+    /* Logo size */
+}
+
+.nav-links {
+    list-style: none;
+    /* Remove default list style */
+    display: flex;
+    /* Flexbox for navigation */
+}
+
+.nav-links li {
+    margin: 0 15px;
+    /* Space between links */
+}
+
+.nav-links a {
+    color: #ffffff;
+    /* White link color */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s;
+    /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+    /* Change color on hover */
+}
+
+.search-user {
+    display: flex;
+    /* Flexbox for search bar and user icon */
+    align-items: center;
+    /* Center align items */
+}
+
+.search-bar {
+    padding: 10px;
+    /* Padding for search bar */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 10px;
+    /* Space between search bar and user icon */
+    width: 200px;
+    /* Set width for search bar */
+}
+
+.user-icon {
+    color: #ffc107;
+    /* Gold color for user icon */
+    font-size: 24px;
+    /* Size for user icon */
+    text-decoration: none;
+    /* No underline */
+}
+
+.footer {
+    background: rgba(30, 30, 30, 0.8);
+    /* Dark background for footer */
+    color: #ffffff;
+    /* White text */
+    padding: 20px 0;
+    /* Padding for footer */
+}
+
+.footer-content {
+    display: flex;
+    /* Flexbox for footer sections */
+    justify-content: space-between;
+    /* Space between sections */
+    padding: 0 20px;
+    /* Padding for footer content */
+}
+
+.footer-section {
+    flex: 1;
+    /* Allow footer sections to grow equally */
+    margin: 0 20px;
+    /* Space between sections */
+}
+
+.footer-title {
+    font-size: 20px;
+    /* Footer title size */
+    margin-bottom: 10px;
+    /* Space below title */
+}
+
+.footer-link {
+    color: #ffffff;
+    /* White link color */
+    text-decoration: none;
+    /* No underline */
+}
+
+.footer-link:hover {
+    color: #ffc107;
+    /* Change link color on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    /* Center align footer bottom */
+    margin-top: 20px;
+    /* Space above footer bottom */
+}
+
+.footer-copy {
+    font-size: 14px;
+    /* Footer copy size */
+}
+
+.newsletter-form {
+    display: flex;
+    /* Flexbox for newsletter form */
+}
+
+.newsletter-input {
+    padding: 10px;
+    /* Padding for input */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    flex: 1;
+    /* Take available space */
+}
+
+.newsletter-input:focus {
+    outline: none;
+    /* Remove outline on focus */
+}
+
+.newsletter-form .btn {
+    margin-left: 10px;
+    /* Space between input and button */
+    background-color: #ffc107;
+    /* Button background */
+    color: #000000;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px 15px;
+    /* Padding for button */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transition */
+}
+
+.newsletter-form .btn:hover {
+    background-color: #ffffff;
+    /* Change background on hover */
+    color: #23272a;
+    /* Change text color on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
+}

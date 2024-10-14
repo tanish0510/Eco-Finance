@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinance</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">EcoFinance</h1>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="eco-loans.html">Eco-Loans</a></li>
+                    <li><a href="eco-savings.html">Eco-Savings</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gs.html">Green Score</a></li>
+                    <li><a href="#">Initiatives</a></li>
+                    <li><a href="#">Stocks</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="search-user">
+                    <input type="text" class="search-bar" placeholder="Search...">
+                    <a href="#" class="user-icon"><i class="fas fa-user-circle"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <h2>Welcome to EcoFinance</h2>
+            <p>Tagline</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Loans</h3>
+                    <p>Description of service 1.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Savings</h3>
+                    <p>Description of service 2.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sustainable Development</h3>
+                    <p>Description of service 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Programs</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>Initiatives</h3>
+                    <p>Brief description of project 1.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Community</h3>
+                    <p>Brief description of project 2.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Products</h3>
+                    <p>Brief description of project 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transaction Form Section -->
+        <section class="transaction-form">
+            <h2>Submit Your Transaction</h2>
+            <form id="transaction-form">
+                <label for="transactionType">Transaction Type:</label>
+                <select id="transactionType" required>
+                    <option value="eco-loan">Eco Loan</option>
+                    <option value="eco-saving">Eco Savings</option>
+                </select>
+
+                <label for="co2Emissions">CO2 Emissions (kg):</label>
+                <input type="number" id="co2Emissions" required>
+
+                <label for="energyUsage">Energy Usage (kWh):</label>
+                <input type="number" id="energyUsage">
+
+                <label for="recyclingEffort">Recycling Effort (1-100):</label>
+                <input type="number" id="recyclingEffort">
+
+                <button type="submit">Submit Transaction</button>
+            </form>
+
+            <h3>Your Green Score: <span id="green-score">--</span></h3>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2 class="footer-title">About Us</h2>
+                    <p class="footer-description">
+                        We are dedicated to innovating the future of technology with cutting-edge solutions and insightful content.
+                    </p>
+                </div>
+                <div class="footer-section links">
+                    <h2 class="footer-title">Quick Links</h2>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">Projects</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section newsletter">
+                    <h2 class="footer-title">Stay Connected</h2>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Subscribe to our newsletter" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2024 EcoFinance. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

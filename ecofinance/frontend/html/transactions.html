@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Transaction</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <h2>Submit a Transaction</h2>
+    <form id="transactionForm">
+        <label for="type">Transaction Type:</label>
+        <input type="text" id="type" name="type" required><br>
+
+        <label for="co2">CO2 Emissions (kg):</label>
+        <input type="number" id="co2" name="co2" required><br>
+
+        <label for="energy">Energy Usage (kWh):</label>
+        <input type="number" id="energy" name="energy" required><br>
+
+        <label for="recycling">Recycling Efforts (kg):</label>
+        <input type="number" id="recycling" name="recycling" required><br>
+
+        <button type="submit">Submit Transaction</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('transactionForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent the page from reloading
+
+            const transactionData = {
+                type: document.getElementById('type').value,
+                co2: parseFloat(document.getElementById('co2').value),
+                energy: parseFloat(document.getElementById('energy').value),
+                recycling: parseFloat(document.getElementById('recycling').value),
+            };
+
+            try {
+                // Send transaction data to the server
+                const response = await fetch('http://localhost:3000/api/transactions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(transactionData),
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById('result').textContent = `Green Score: ${data.greenScore}`;
+                } else {
+                    document.getElementById('result').textContent = `Error: ${data.error}`;
+                }
+            } catch (error) {
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(135deg, #006400, #8B4513, #005000, #7A4513);
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    background: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    /* Add relative positioning for cart icon */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+.search-user {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.user-icon {
+    color: #ffc107;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.cart-icon {
+    position: relative;
+    /* Positioning for the cart icon */
+    color: #ffc107;
+    /* Yellow color */
+    font-size: 24px;
+    margin-left: 20px;
+    /* Add space between user icon and cart icon */
+    transition: transform 0.3s;
+    /* For hover effect */
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+    /* Scale on hover */
+}
+
+.products-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    max-width: 300px;
+}
+
+.product-card:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Lighten color on hover */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.product-card .quantity {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.product-card .btn {
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #ffffff;
+    color: #23272a;
+    transform: scale(1.05);
+}
+
+.footer {
+    background: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ffc107;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-copy {
+    font-size: 14px;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.newsletter-input:focus {
+    outline: none;
+}
+
+.newsletter-form .btn {
+    margin-left: 10px;
+}
+
+
+/* Cart Styles */
+
+.cart {
+    position: fixed;
+    right: -300px;
+    /* Initially off-screen */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    /* Smooth transition for cart opening */
+    z-index: 1000;
+    padding: 20px;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-content h2 {
+    margin: 0 0 20px;
+}
+
+.cart-content button {
+    margin-top: auto;
+    /* Push the checkout button to the bottom */
+}
