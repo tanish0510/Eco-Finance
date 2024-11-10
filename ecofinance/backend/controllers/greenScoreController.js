@@ -159,7 +159,7 @@ exports.getGreenScore = async(req, res) => {
     }
 };
 
-// Function to add a new transaction and calculate Green Score
+// Function to add a new transaction
 exports.addTransaction = async(req, res) => {
     try {
         const { userId, co2Emissions, transactionType } = req.body;
@@ -174,12 +174,9 @@ exports.addTransaction = async(req, res) => {
             return res.status(400).json({ message: "Invalid userId format" });
         }
 
-        // Create ObjectId using 'new'
-        const userObjectId = new mongoose.Types.ObjectId(userId);
-
         // Create a new transaction
         const transaction = new Transaction({
-            userId: userObjectId,
+            userId: new mongoose.Types.ObjectId(userId),
             co2Emissions,
             transactionType,
         });
@@ -196,10 +193,10 @@ exports.addTransaction = async(req, res) => {
 // Function to save Green Score after calculation along with state
 exports.saveGreenScore = async(req, res) => {
     try {
-        // Extract 'state' from req.body
+        // Extract parameters from req.body
         const { userId, numberOfPeople, electricityUsage, renewableEnergy, energyEfficiency, state } = req.body;
 
-        // Check if 'state' and all required fields are present
+        // Validate required fields
         if (!userId || !numberOfPeople || !electricityUsage || !renewableEnergy || !energyEfficiency || !state) {
             return res.status(400).json({ message: "Missing required fields" });
         }
@@ -212,7 +209,7 @@ exports.saveGreenScore = async(req, res) => {
         // Calculate the Green Score
         const greenScore = exports.calculateGreenScore(numberOfPeople, electricityUsage, renewableEnergy, energyEfficiency);
 
-        // Save the green score to MongoDB
+        // Prepare data for saving
         const greenScoreData = new GreenScore({
             userId: new mongoose.Types.ObjectId(userId),
             numberOfPeople,
@@ -220,17 +217,19 @@ exports.saveGreenScore = async(req, res) => {
             renewableEnergy,
             energyEfficiency,
             greenScore,
-            state, // Ensure 'state' is passed here
+            state,
         });
 
+        // Save the green score to MongoDB
         await greenScoreData.save();
 
-        // Save user state to UserState collection
+        // Prepare data for user state
         const userState = new UserState({
             userId: new mongoose.Types.ObjectId(userId),
             state
         });
 
+        // Save user state to UserState collection
         await userState.save();
 
         return res.status(201).json({ message: "Green Score and User State saved successfully!", greenScore });

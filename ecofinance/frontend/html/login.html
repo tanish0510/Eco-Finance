@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - EcoFinance</title>
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -32,7 +31,7 @@
     <main class="login-main">
         <div class="login-container">
             <h2>Login</h2>
-            <form class="login-form">
+            <form id="login-form" class="login-form" onsubmit="return validateLogin()">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -42,8 +41,9 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <button type="submit" class="btn">Login</button>
-                <p class="signup-link">Don't have an account? <a href="register.html">Sign up</a></p>
+                <p class="signup-link">Don't have an account? <a href="register.html">Sign Up</a></p>
             </form>
+            <div class="error-message" id="error-message"></div>
         </div>
     </main>
 
@@ -52,9 +52,7 @@
             <div class="footer-content">
                 <div class="footer-section about">
                     <h2 class="footer-title">About Us</h2>
-                    <p class="footer-description">
-                        We are dedicated to innovating the future of technology with cutting-edge solutions and insightful content.
-                    </p>
+                    <p class="footer-description">We are dedicated to innovating the future of technology with cutting-edge solutions and insightful content.</p>
                 </div>
                 <div class="footer-section links">
                     <h2 class="footer-title">Quick Links</h2>
@@ -79,6 +77,24 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/login.js"></script>
+    <script>
+        function validateLogin() {
+            // Add your validation logic here
+            // Example: check if username and password are not empty
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                document.getElementById('error-message').innerText = 'Please fill in all fields.';
+                return false; // Prevent form submission
+            }
+            // Optionally, you could add more validations here
+
+            return true; // Allow form submission
+        }
+    </script>
 </body>
 
 </html>

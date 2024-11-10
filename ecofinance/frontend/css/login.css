@@ -1,3 +1,5 @@
+/* login.css */
+
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -117,18 +119,11 @@ body {
     transform: scale(1.05);
 }
 
-.signup-link {
+.error-message {
+    color: red;
+    /* Style for error messages */
     text-align: center;
-    margin-top: 20px;
-}
-
-.signup-link a {
-    color: #ffc107;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
+    margin-top: 10px;
 }
 
 .footer {
@@ -166,21 +161,16 @@ body {
     font-size: 14px;
 }
 
-.newsletter-form {
-    display: flex;
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.newsletter-input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    flex: 1;
+.signup-link a {
+    color: #ffc107;
+    text-decoration: none;
 }
 
-.newsletter-input:focus {
-    outline: none;
-}
-
-.newsletter-form .btn {
-    margin-left: 10px;
+.signup-link a:hover {
+    text-decoration: underline;
 }
